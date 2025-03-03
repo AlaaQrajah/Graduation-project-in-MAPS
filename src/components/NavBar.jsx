@@ -3,23 +3,23 @@ import LogoImag from "../assets/images/logo.webp";
 import SearchInput from "./SearchInput";
 
 const NavBar = ({ toggleTheme, theme, onSearch }) => {
-  // const handleRefresh = () => {
-  //   window.location.reload();
-  // };
+  const handleRefresh = () => {
+    window.location.reload();
+  };
 
   return (
     <>
       <div className="navbar-app py-2 border-b border-b-gray-400 mb-3 grid grid-cols-12 items-center">
         {/* Logo Section */}
 
-        <div className="cover-logo col-span-1  ">
-          {/* <button onClick={handleRefresh}> */}
+        <div className="cover-logo col-span-1 cursor-pointer">
+          <button onClick={handleRefresh}>
             <Logo
               text="gamp app header"
-              className="logo-heder  "
+              className="logo-heder cursor-pointer"
               image={LogoImag}
             />
-          {/* </button> */}
+          </button>
         </div>
 
         {/* Search Section */}
