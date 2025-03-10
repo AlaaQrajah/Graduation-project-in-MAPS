@@ -6,6 +6,7 @@ import "../App.css"; // استيراد ملف الأنماط (CSS) الخاص ب
 
 // تعريف مكون NavBar الذي يستقبل 3 خصائص: toggleTheme (لتغيير الوضع)، theme (الوضع الحالي)، onSearch (دالة البحث).
 const NavBar = ({ toggleTheme, theme, onSearch }) => {
+
   // دالة handleRefresh التي تقوم بإعادة تحميل الصفحة عند النقر على الشعار
   const handleRefresh = () => {
     window.location.reload(); // إعادة تحميل الصفحة
@@ -13,40 +14,31 @@ const NavBar = ({ toggleTheme, theme, onSearch }) => {
 
   return (
     <>
-      <div className="navbar-app">
-        {" "}
-        {/* حاوية الشريط العلوي */}
+      <div className="navbar-app"> {/* حاوية الشريط العلوي */}
+        
         {/* قسم الشعار */}
         <div className="gamp-app-header">
-          <button onClick={handleRefresh} text="gamp app header">
-            {" "}
-            {/* عند النقر على الزر، سيتم استدعاء دالة handleRefresh */}
-            <Logo image={LogoImag} />{" "}
-            {/* عرض الشعار باستخدام مكون Logo وتمرير صورة الشعار إليه */}
+          <button onClick={handleRefresh} text="gamp app header"> {/* عند النقر على الزر، سيتم استدعاء دالة handleRefresh */}
+            <Logo image={LogoImag} /> {/* عرض الشعار باستخدام مكون Logo وتمرير صورة الشعار إليه */}
           </button>
         </div>
+
         {/* قسم حقل البحث */}
         <div className="cover-search">
-          <SearchInput onSearch={onSearch} />{" "}
-          {/* عرض مكون البحث وتمرير دالة onSearch إليه */}
+          <SearchInput onSearch={onSearch} /> {/* عرض مكون البحث وتمرير دالة onSearch إليه */}
         </div>
+
         {/* قسم تبديل الوضعية (النهار/الليل) */}
         <div className="theme-mode">
-          <label className="switch">
-            {" "}
-            {/* التسمية الخاصة بالتبديل بين الوضعين */}
+          <label className="switch"> {/* التسمية الخاصة بالتبديل بين الوضعين */}
             <input
               id="input" // تعيين الـ ID للـ input
               type="checkbox" // تحديد نوع العنصر كـ checkbox
               onChange={toggleTheme} // عند تغيير الوضعية، استدعاء الدالة toggleTheme
               checked={theme === "dark"} // إذا كان الوضع الحالي هو "dark"، يتم تحديد الـ checkbox
             />
-            <div className="slider round">
-              {" "}
-              {/* الجزء الذي يحتوي على التبديل مع الشكل الدائري */}
-              <div className="sun-moon">
-                {" "}
-                {/* الحاوية التي تحتوي على الأيقونات الخاصة بالشمس والقمر */}
+            <div className="slider round"> {/* الجزء الذي يحتوي على التبديل مع الشكل الدائري */}
+              <div className="sun-moon"> {/* الحاوية التي تحتوي على الأيقونات الخاصة بالشمس والقمر */}
                 {/* الأيقونات الخاصة بالقمر التي تظهر في الوضع الليلي */}
                 <svg id="moon-dot-1" className="moon-dot" viewBox="0 0 100 100">
                   <circle cx="50" cy="50" r="50"></circle>
@@ -58,27 +50,16 @@ const NavBar = ({ toggleTheme, theme, onSearch }) => {
                   <circle cx="50" cy="50" r="50"></circle>
                 </svg>
                 {/* الأيقونات الخاصة بالشمس التي تظهر في الوضع النهاري */}
-                <svg
-                  id="light-ray-1"
-                  className="light-ray"
-                  viewBox="0 0 100 100"
-                >
+                <svg id="light-ray-1" className="light-ray" viewBox="0 0 100 100">
                   <circle cx="50" cy="50" r="50"></circle>
                 </svg>
-                <svg
-                  id="light-ray-2"
-                  className="light-ray"
-                  viewBox="0 0 100 100"
-                >
+                <svg id="light-ray-2" className="light-ray" viewBox="0 0 100 100">
                   <circle cx="50" cy="50" r="50"></circle>
                 </svg>
-                <svg
-                  id="light-ray-3"
-                  className="light-ray"
-                  viewBox="0 0 100 100"
-                >
+                <svg id="light-ray-3" className="light-ray" viewBox="0 0 100 100">
                   <circle cx="50" cy="50" r="50"></circle>
                 </svg>
+
                 {/* الأيقونات الخاصة بالغيوم التي تظهر في الوضع الليلي والنهاري */}
                 <svg id="cloud-1" className="cloud-dark" viewBox="0 0 100 100">
                   <circle cx="50" cy="50" r="50"></circle>
