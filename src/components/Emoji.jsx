@@ -11,5 +11,5 @@ export const Emoji = ({ rating }) => {
         5: { src: bullsEye, alt: "bullsEye" },
     };
 
-    return <img {...emojiMap[rating]} width={25} />;
+    return <img {...emojiMap[rating]} width={30} />;
 };

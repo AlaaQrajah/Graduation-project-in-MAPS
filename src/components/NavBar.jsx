@@ -1,7 +1,7 @@
 import Logo from "./Logo";
 import LogoImag from "../assets/images/logo.webp";
 import SearchInput from "./SearchInput";
-
+{/*Function to make the icon refresh the page*/}
 const NavBar = ({ toggleTheme, theme, onSearch }) => {
   const handleRefresh = () => {
     window.location.reload();
@@ -11,7 +11,6 @@ const NavBar = ({ toggleTheme, theme, onSearch }) => {
     <>
       <div className="navbar-app py-2 border-b border-b-gray-400 mb-3 grid grid-cols-12 items-center">
         {/* Logo Section  is loding*/}
-
         <div className="cover-logo col-span-1  cursor-pointer">
           <button
             onClick={handleRefresh}
