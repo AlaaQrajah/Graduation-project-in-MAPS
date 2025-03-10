@@ -1,8 +1,186 @@
-/* Start Navbar */
-
-.navbar-app .logo {
-    width: 60px;
-    height: 60px;
-    margin: auto;
+/* بداية شريط التنقل (Navbar) */
+.navbar-app {
+  padding-top: 0.5rem; /* إضافة مسافة من الأعلى */
+  padding-bottom: 0.5rem; /* إضافة مسافة من الأسفل */
+  border-bottom: 1px solid #9ca3af; /* خط فاصل أسفل الشريط */
+  margin-bottom: 0.75rem; /* إضافة مسافة أسفل الشريط */
+  display: grid; /* استخدام الشبكة لتوزيع العناصر */
+  grid-template-columns: repeat(12, 1fr); /* تقسيم الشريط إلى 12 عمودًا متساويًا */
+  align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
 }
-/* End Navbar */
+
+/* تنسيق الشعار */
+.navbar-app .logo {
+  width: 60px; /* عرض الشعار */
+  height: 60px; /* ارتفاع الشعار */
+  margin: auto; /* محاذاة الشعار في المنتصف */
+}
+
+/* تنسيق رأس التطبيق */
+.navbar-app .gamp-app-header {
+  grid-column: span 1; /* يشغل عمودًا واحدًا في الشبكة */
+  cursor: pointer; /* تغيير المؤشر عند المرور على العنصر */
+}
+
+/* تنسيق زر في رأس التطبيق */
+.navbar-app .gamp-app-header button {
+  cursor: pointer; /* تغيير المؤشر عند المرور على الزر */
+}
+
+/* تنسيق حقل البحث */
+.navbar-app .cover-search {
+  grid-column: span 10; /* يشغل 10 أعمدة من الشبكة */
+}
+
+/* تنسيق وضعية التبديل */
+.navbar-app .theme-mode {
+  grid-column: span 1; /* يشغل عمودًا واحدًا */
+  display: flex; /* استخدام Flexbox لتوزيع العناصر */
+  align-items: center; /* محاذاة العناصر في المنتصف عموديًا */
+  justify-content: flex-end; /* محاذاة العناصر إلى اليمين */
+}
+
+/* تنسيق التسمية الخاصة بوضع التبديل */
+.navbar-app .theme-mode label {
+  display: inline-flex; /* عرض التسمية بشكل مرن */
+  align-items: center; /* محاذاة العناصر في المنتصف عموديًا */
+  margin-inline-end: 1.25rem; /* إضافة مسافة بين التسمية والعناصر الأخرى */
+  cursor: pointer; /* تغيير المؤشر عند المرور على التسمية */
+}
+
+/* تنسيق مدخل التبديل (input) */
+.navbar-app .theme-mode input {
+  position: absolute; /* تموضع المدخل بشكل مطلق */
+  width: 1px; /* تحديد العرض */
+  height: 1px; /* تحديد الارتفاع */
+  padding: 0; /* إزالة الحشو */
+  margin: -1px; /* إضافة مسافة سلبية */
+  overflow: hidden; /* إخفاء المحتوى الزائد */
+  clip: rect(0, 0, 0, 0); /* قص المحتوى لجعله غير مرئي */
+  white-space: nowrap; /* منع التفاف النص */
+  border: 0; /* إزالة الحدود */
+}
+
+/* تصميم مربع التبديل */
+.switch {
+  position: relative; /* تموضع مربع التبديل بشكل مطلق */
+  display: inline-block; /* عرض مربع التبديل بشكل مرن */
+  width: 60px; /* عرض مربع التبديل */
+  height: 34px; /* ارتفاع مربع التبديل */
+}
+
+/* تنسيق الزر داخل مربع التبديل */
+.switch #input {
+  opacity: 0; /* جعل المدخل غير مرئي */
+  width: 0; /* إزالة العرض */
+  height: 0; /* إزالة الارتفاع */
+}
+
+/* تصميم الشريط (slider) */
+.slider {
+  position: absolute; /* تموضع الشريط بشكل مطلق */
+  cursor: pointer; /* تغيير المؤشر عند المرور على الشريط */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196f3; /* اللون الأزرق في الوضع النهاري */
+  -webkit-transition: 0.4s; /* تأثير الانتقال في متصفحات WebKit */
+  transition: 0.4s; /* تأثير الانتقال في المتصفحات الأخرى */
+  z-index: 0; /* تحديد طبقة العنصر */
+  overflow: hidden; /* إخفاء المحتوى الزائد */
+}
+
+/* تنسيق الشمس والقمر */
+.sun-moon {
+  position: absolute; /* تموضع الشمس أو القمر بشكل مطلق */
+  content: ""; /* محتوى فارغ */
+  height: 26px; /* تحديد ارتفاع الشمس أو القمر */
+  width: 26px; /* تحديد عرض الشمس أو القمر */
+  left: 4px; /* تحديد المسافة من اليسار */
+  bottom: 4px; /* تحديد المسافة من الأسفل */
+  background-color: yellow; /* تحديد اللون الأصفر في الوضع النهاري */
+  transition: 0.4s; /* إضافة تأثير الانتقال عند التحويل بين الوضعين */
+}
+
+/* عند التبديل إلى الوضع الليلي */
+#input:checked + .slider .sun-moon {
+  transform: translateX(26px); /* تحريك الشمس أو القمر إلى الجهة الأخرى */
+  background-color: white; /* تغيير اللون إلى الأبيض في الوضع الليلي */
+  animation: rotate-center 0.6s ease-in-out both; /* إضافة حركة لتدوير الشمس أو القمر */
+}
+
+/* تصميم الغيوم */
+.cloud-light {
+  position: absolute; /* تموضع الغيوم بشكل مطلق */
+  fill: #eee; /* تحديد لون الغيوم في الوضع النهاري */
+  animation-name: cloud-move; /* تطبيق حركة الغيوم */
+  animation-duration: 6s; /* مدة الحركة */
+  animation-iteration-count: infinite; /* تكرار الحركة بشكل غير محدود */
+}
+
+/* الغيوم في الوضع الليلي */
+.cloud-dark {
+  position: absolute; /* تموضع الغيوم بشكل مطلق */
+  fill: #ccc; /* تحديد لون الغيوم في الوضع الليلي */
+  animation-name: cloud-move; /* تطبيق حركة الغيوم */
+  animation-duration: 6s; /* مدة الحركة */
+  animation-iteration-count: infinite; /* تكرار الحركة بشكل غير محدود */
+  animation-delay: 1s; /* تأخير الحركة قليلاً */
+}
+
+/* حركة الغيوم */
+@keyframes cloud-move {
+  0% {
+    transform: translateX(0px); /* بداية الحركة */
+  }
+  40% {
+    transform: translateX(4px); /* تحريك الغيوم قليلاً */
+  }
+  80% {
+    transform: translateX(-4px); /* تحريك الغيوم في الاتجاه الآخر */
+  }
+  100% {
+    transform: translateX(0px); /* إعادة الغيوم إلى مكانها الأصلي */
+  }
+}
+
+/* تصميم النجوم */
+.stars {
+  transform: translateY(-32px); /* تحريك النجوم لأعلى */
+  opacity: 0; /* جعل النجوم غير مرئية في البداية */
+  transition: 0.4s; /* إضافة تأثير الانتقال */
+}
+
+/* تصميم كل نجمة */
+.star {
+  fill: white; /* لون النجوم */
+  position: absolute; /* تموضع النجوم بشكل مطلق */
+  animation-name: star-twinkle; /* تطبيق تأثير وميض النجوم */
+  animation-duration: 2s; /* مدة الوميض */
+  animation-iteration-count: infinite; /* تكرار الوميض بشكل غير محدود */
+}
+
+/* عندما يتم التبديل إلى الوضع الليلي */
+#input:checked + .slider .stars {
+  transform: translateY(0); /* جعل النجوم مرئية */
+  opacity: 1; /* زيادة الشفافية */
+}
+
+/* حركة وميض النجوم */
+@keyframes star-twinkle {
+  0% {
+    transform: scale(1); /* النجمة في حجمها الطبيعي */
+  }
+  40% {
+    transform: scale(1.2); /* تكبير النجمة */
+  }
+  80% {
+    transform: scale(0.8); /* تصغير النجمة */
+  }
+  100% {
+    transform: scale(1); /* العودة إلى الحجم الطبيعي */
+  }
+}
+
+/* نهاية شريط التنقل */
