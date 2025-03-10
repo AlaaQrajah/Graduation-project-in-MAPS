@@ -11,6 +11,7 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
+  justify-content: space-between;
 }
 .navbar-app .logo {
   width: 60px;
@@ -45,6 +46,7 @@ body {
   align-items: center;
   margin-inline-end: 1.25rem;
   cursor: pointer;
+  padding: 0;
 }
 .navbar-app .theme-mode input {
   position: absolute;
@@ -63,8 +65,10 @@ body {
   display: inline-block;
   width: 60px;
   height: 34px;
+ 
 }
 .switch:hover {
+  
   box-shadow: 0px 0px 20px rgb(27, 41, 46), 0px 0px 40px rgb(51, 48, 48),
     0px 0px 80px rgb(35, 41, 48);
 }
@@ -404,9 +408,11 @@ body.dark .input-style:focus {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
+  color: aqua;
 }
 
 /* End searsh */
-
 /* End Navbar */
- 
+/* Start Genre */
+
+/* End Genre */

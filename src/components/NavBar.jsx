@@ -97,6 +97,7 @@ const NavBar = ({ toggleTheme, theme, onSearch }) => {
                   <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"></path>
                 </svg>
               </div>
+         
             </div>
           </label>
         </div>
