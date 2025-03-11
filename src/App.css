@@ -416,3 +416,13 @@ body.dark .input-style:focus {
 /* Start Genre */
 
 /* End Genre */
+
+.scour {
+  color: #f9fafb;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  margin-inline-end: 0.5rem;
+  padding: 0.125rem 0.625rem;
+  border-radius: 0.25rem;
+}
