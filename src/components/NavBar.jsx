@@ -27,6 +27,7 @@ const NavBar = ({ toggleTheme, theme, onSearch }) => {
             <input
               id="input"
               type="checkbox"
+           
               onChange={toggleTheme}
               checked={theme === "dark"}
             />
