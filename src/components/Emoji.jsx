@@ -13,3 +13,4 @@ export const Emoji = ({ rating }) => {
 
     return <img {...emojiMap[rating]} width={30} />;
 };
+

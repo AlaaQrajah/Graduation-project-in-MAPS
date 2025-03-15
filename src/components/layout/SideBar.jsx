@@ -1,6 +1,5 @@
-import GenreList from "./GenreList";
-import "../App.css";
-import { HiAnnotation } from "react-icons/hi";
+import GenreList from "../Genres/GenreList";
+import "../../App.css";
 
 const SideBar = ({ onSelectGenre }) => {
   return (

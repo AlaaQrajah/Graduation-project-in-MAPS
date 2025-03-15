@@ -11,7 +11,7 @@ const CriticScore = ({ score }) => {
       : "text-red-600";
   return (
     <span
-      className={`scour ${backgroundColor} ${textColor}  dark:${backgroundColor}  dark:${textColor}`}
+      className={`scour ${backgroundColor} ${textColor}  dark:${backgroundColor}  dark:${textColor} text-sm font-medium me-2 px-2.5 py-0.5 rounded `}
     >
       {score}
     </span>

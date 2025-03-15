@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import "../App.css";
+import "../../App.css";
 const SearchInput = ({ onSearch }) => {
   const ref = useRef(null);
   return (

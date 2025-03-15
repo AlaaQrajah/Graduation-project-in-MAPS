@@ -1,4 +1,4 @@
-import usePlatform from "../hooks/usePlatform";
+import usePlatform from "../../hooks/usePlatform";
 
 const PlatformSelector = ({ onSelectPlatform, selectPlatform }) => {
     const { data, error } = usePlatform();
