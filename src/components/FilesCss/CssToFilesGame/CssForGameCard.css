@@ -1,0 +1,23 @@
+/* Start GameCard */
+.game-card {
+  @apply max-w-sm bg-white border border-gray-200 rounded-lg shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:bg-gray-800 dark:border-gray-700;
+}
+.game-link {
+  @apply block;
+}
+.game-image {
+  @apply rounded-t-lg w-full h-60 object-cover;
+}
+.game-info {
+  @apply p-5;
+}
+.game-details {
+  @apply flex justify-between items-center mb-3;
+}
+.game-title-link {
+  @apply block;
+}
+.game-title {
+  @apply mb-2 text-xl font-semibold text-gray-900 dark:text-white;
+}
+/* End GameCard */
