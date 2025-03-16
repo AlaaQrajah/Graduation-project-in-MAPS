@@ -2,7 +2,7 @@ import useGames from "../../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import "../../App.css";
-import "../FilesCss/CssToFilesGenre/CssForGenreList.css";
+import "../FilesCss/CssToFilesGame/CssForGameList.css";
 const GameList = ({
   selectGenre,
   selectPlatform,
