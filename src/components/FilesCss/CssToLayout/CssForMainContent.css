@@ -1,0 +1,10 @@
+ 
+/* Start MainContent */
+.main-content {
+  @apply col-span-5;
+}
+.filters {
+  @apply filter my-3;
+}
+
+/* End MainContent */

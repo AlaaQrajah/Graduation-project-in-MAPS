@@ -9,7 +9,7 @@ import {
 import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo, SiPanasonic } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
-import "../FilesCss/Platform/CssForPlatformIconList.css";
+import "../FilesCss/CssToPlatform/CssForPlatformIconList.css";
 const PlatformIconList = ({ platforms }) => {
   const iconMap = {
     pc: FaWindows,

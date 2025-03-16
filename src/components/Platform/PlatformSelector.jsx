@@ -1,5 +1,5 @@
 import usePlatform from "../../hooks/usePlatform";
-import "../FilesCss/Platform/CssForPlatformIconSelector.css";
+import "../FilesCss/CssToPlatform/CssForPlatformIconSelector.css";
 const PlatformSelector = ({ onSelectPlatform, selectPlatform }) => {
   const { data, error } = usePlatform();
   if (error) return null;

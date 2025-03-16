@@ -2,7 +2,7 @@ import GameList from "../Games/GameList";
 import PlatformSelector from "../Platform/PlatformSelector";
 import SortSelector from "../SortSelector";
 import { GameHeading } from "../Games/GameHeading";
-
+import "../FilesCss/CssToLayout/CssForMainContent.css";
 const MainContent = ({
   selectGenre,
   onSelectPlatform,
@@ -13,12 +13,12 @@ const MainContent = ({
 }) => {
   return (
     <>
-      <div className="main-content col-span-5">
+      <div className="main-content">
         <GameHeading
           selectGenre={selectGenre}
           selectPlatform={selectPlatform}
         />
-        <div className="filter my-3">
+        <div className="filters">
           <PlatformSelector
             onSelectPlatform={onSelectPlatform}
             selectPlatform={selectPlatform}
