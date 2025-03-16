@@ -3,7 +3,7 @@ import LogoImag from "../../assets/images/logo.webp";
 import SearchInput from "../layout/SearchInput";
 import "../../App.css";
 import ThemeToggle from "../Theme/ThemeToggle";
-
+import "../FilesCss/CssToLayout/CssForNavBar.css";
 const NavBar = ({ toggleTheme, theme, onSearch }) => {
   const handleRefresh = () => {
     window.location.reload();
@@ -24,11 +24,11 @@ const NavBar = ({ toggleTheme, theme, onSearch }) => {
           </button>
         </div>
         {/* Search Section */}
-        <div className="search-section col-span-9 md:col-span-10 flex justify-center md:justify-start">
-          <SearchInput onSearch={onSearch} className="w-full md:w-96" />
+        <div>
+          <SearchInput onSearch={onSearch} className=" search-section" />
         </div>
         {/* Theme Toggle Section */}
-        <div className="theme-toggle-section col-span-1 flex justify-end">
+        <div className="theme-toggle-section">
           <ThemeToggle toggleTheme={toggleTheme} theme={theme} />
         </div>
       </div>

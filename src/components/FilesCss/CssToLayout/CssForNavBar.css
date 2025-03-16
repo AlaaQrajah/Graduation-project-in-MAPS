@@ -1,0 +1,11 @@
+/* Start Navbar */
+.search-section {
+  @apply col-span-9 md:col-span-10 flex justify-center md:justify-start;
+}
+.theme-toggle-section {
+  @apply col-span-1 flex justify-end;
+}
+.search-section {
+  @apply w-full md:w-96;
+}
+/* End Navbar */
