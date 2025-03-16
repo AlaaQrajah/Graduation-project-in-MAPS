@@ -1,0 +1,28 @@
+/* Start GameCardSkeleton */
+
+.game-card-skeleton {
+  @apply max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700;
+}
+.game-card-image {
+  @apply rounded-t-lg bg-gray-300 w-full h-60 animate-pulse;
+}
+.game-card-content {
+  @apply p-5;
+}
+.game-card-title {
+  @apply h-6 bg-gray-300 rounded-md mb-4 w-3/4  animate-pulse;
+}
+.game-card-icons {
+  @apply flex justify-between items-center;
+}
+.game-content-placeholder {
+  @apply flex space-x-2;
+}
+.icon-placeholder {
+  @apply w-6 h-6 bg-gray-300 rounded-full animate-pulse;
+}
+.button-placeholder {
+  @apply w-10 h-6 bg-gray-300 rounded-md animate-pulse;
+}
+
+/* End GameCardSkeleton */
