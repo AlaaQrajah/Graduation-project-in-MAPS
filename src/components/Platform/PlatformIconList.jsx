@@ -29,7 +29,10 @@ const PlatformIconList = ({ platforms }) => {
         {platforms.map((platform) => {
           const IconPlat = iconMap[platform.slug];
           return (
-            <IconPlat key={platform.id} className="text-gray-500 w-6 h-6" />
+            <IconPlat
+              key={platform.id}
+              className="IconPlat "
+            />
           );
         })}
       </div>

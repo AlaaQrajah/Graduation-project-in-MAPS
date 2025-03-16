@@ -2,4 +2,7 @@
 .platform-icon {
   @apply flex space-x-2 my-2;
 }
+.IconPlat {
+  @apply text-gray-500 w-6 h-6;
+}
 /* End PlatformIconList */
