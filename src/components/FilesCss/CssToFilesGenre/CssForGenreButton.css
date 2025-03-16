@@ -1,0 +1,11 @@
+/* Start GenreButton */
+.genre-button {
+  @apply w-full flex items-center p-3 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-200 ease-in-out;
+}
+.genre-button-image {
+  @apply w-12 h-12 rounded-lg object-cover;
+}
+.genre-button-name {
+  @apply ml-3 text-sm font-medium text-gray-900 dark:text-white;
+}
+/* End GenreButton */

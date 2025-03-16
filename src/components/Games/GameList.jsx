@@ -2,6 +2,7 @@ import useGames from "../../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import "../../App.css";
+import "../FilesCss/CssToFilesGenre/CssForGenreList.css";
 const GameList = ({
   selectGenre,
   selectPlatform,
@@ -18,17 +19,14 @@ const GameList = ({
 
   if (error)
     return (
-      <div
-        className="error-alertp-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
-        role="alert"
-      >
+      <div className="error-alert " role="alert">
         <span className="alert-title">Danger alert!</span> {error}
       </div>
     );
 
   return (
     <>
-      <div className="game-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="game-grid ">
         {isLoading &&
           skeletons.map((skeleton) => <GameCardSkeleton key={skeleton} />)}
         {data.map((game) => (

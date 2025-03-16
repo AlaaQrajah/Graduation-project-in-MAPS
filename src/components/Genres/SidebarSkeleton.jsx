@@ -1,6 +1,6 @@
 import React from "react";
 import "../../App.css";
-import "../FilesCss/CssForSidebarSkeleton.css";
+import "../FilesCss/CssToFilesGenre/CssForSidebarSkeleton.css";
 
 const SidebarSkeleton = () => {
   return (
