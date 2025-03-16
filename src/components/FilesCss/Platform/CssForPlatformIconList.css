@@ -1,0 +1,5 @@
+/* Start PlatformIconList */
+.platform-icon {
+  @apply flex space-x-2 my-2;
+}
+/* End PlatformIconList */
