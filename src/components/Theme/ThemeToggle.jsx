@@ -1,5 +1,5 @@
 import "../../App.css";
-
+import "../FilesCss/CssToFilesTheme/CssForThemeToggle.css";
 const ThemeToggle = ({ toggleTheme, theme }) => {
   return (
     <div className="theme-mode">
