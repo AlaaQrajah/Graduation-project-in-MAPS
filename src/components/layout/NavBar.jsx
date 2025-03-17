@@ -11,7 +11,7 @@ const NavBar = ({ toggleTheme, theme, onSearch }) => {
 
   return (
     <>
-      <div className="navbar-app ">
+      <div className="navbar-app">
         {" "}
         <div className="gamp-app-header">
           <button onClick={handleRefresh} text="gamp app header">
@@ -24,8 +24,8 @@ const NavBar = ({ toggleTheme, theme, onSearch }) => {
           </button>
         </div>
         {/* Search Section */}
-        <div>
-          <SearchInput onSearch={onSearch} className=" search-section" />
+        <div className="search-section">
+          <SearchInput onSearch={onSearch} className="search-section" />
         </div>
         {/* Theme Toggle Section */}
         <div className="theme-toggle-section">

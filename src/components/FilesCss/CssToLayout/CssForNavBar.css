@@ -6,6 +6,6 @@
   @apply col-span-1 flex justify-end;
 }
 .search-section {
-  @apply w-full md:w-96;
+  @apply w-96 md:w-full;
 }
 /* End Navbar */
