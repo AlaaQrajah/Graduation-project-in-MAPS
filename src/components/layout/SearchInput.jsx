@@ -4,7 +4,7 @@ const SearchInput = ({ onSearch }) => {
   const ref = useRef(null);
   return (
     <form
-      className="w-full"
+      className="w-full "
       onSubmit={(event) => {
         event.preventDefault();
         if (ref.current) onSearch(ref.current.value);

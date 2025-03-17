@@ -1,0 +1,11 @@
+/* Start SearchInput */
+.search-label {
+  @apply dark:text-white;
+}
+.search-container {
+  @apply relative;
+}
+.search-svg-icon {
+  @apply dark:text-gray-300;
+}
+/* End SearchInput */
