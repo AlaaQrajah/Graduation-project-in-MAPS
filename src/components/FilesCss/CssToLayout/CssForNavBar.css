@@ -6,6 +6,6 @@
   @apply col-span-1 flex justify-end;
 }
 .search-section {
-  @apply w-96 md:w-full;
+  @apply w-full;
 }
 /* End Navbar */

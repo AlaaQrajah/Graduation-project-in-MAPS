@@ -7,7 +7,8 @@ import "../FilesCss/CssToFilesGame/CssForGameCard.css";
 
 const GameCard = ({ game }) => {
   return (
-    <div className="game-card">
+    
+    <div id="content" className="game-card">
       <a href="#" className="game-link">
         <img
           className="game-image"
@@ -18,9 +19,11 @@ const GameCard = ({ game }) => {
       <div className="game-info">
         <div className="game-details">
           <div className="game-platforms">
-            <PlatformIconList
-              platforms={game.parent_platforms.map((p) => p.platform)}
-            />
+            {game.parent_platforms && (
+              <PlatformIconList
+                platforms={game.parent_platforms.map((p) => p.platform)}
+              />
+            )}
           </div>
           <div className="game-score">
             <CriticScore score={game.metacritic} />

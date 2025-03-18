@@ -422,12 +422,12 @@ body.dark .input-style:focus {
   justify-content: space-between;
 }
 .SidebarTitle i {
-  cursor: pointer;
   color: #a39393;
   font-size: 27px;
   top: 105px;
   left: 180px;
   position: absolute;
-  display: none;
+  display: flex;
+  cursor: pointer;
 }
  

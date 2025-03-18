@@ -15,7 +15,7 @@ const GameList = ({
     selectSortOrder,
     searchText
   );
-  const skeletons = [1, 2, 3, 4, 5, 6];
+  const skeletons = [1, 2, 3, 4, 5, 6,7,8,9,10];
 
   if (error)
     return (
@@ -26,7 +26,7 @@ const GameList = ({
 
   return (
     <>
-      <div className="game-grid ">
+      <div className="game-grid mx-3">
         {isLoading &&
           skeletons.map((skeleton) => <GameCardSkeleton key={skeleton} />)}
         {data.map((game) => (
