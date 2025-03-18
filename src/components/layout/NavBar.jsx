@@ -29,7 +29,11 @@ const NavBar = ({ toggleTheme, theme, onSearch }) => {
         </div>
         {/* Theme Toggle Section */}
         <div className="theme-toggle-section">
-          <ThemeToggle toggleTheme={toggleTheme} theme={theme} />
+          <ThemeToggle
+            toggleTheme={toggleTheme}
+            theme={theme}
+            className="theme-toggle-section"
+          />
         </div>
       </div>
     </>

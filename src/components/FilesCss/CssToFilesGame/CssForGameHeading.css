@@ -1,5 +1,5 @@
 /* Start GameHeading */
 .Game-Heading-Title {
-  @apply text-4xl font-extrabold;
+  @apply text-4xl font-extrabold text-center sm:text-left;
 }
 /* End GameHeading */

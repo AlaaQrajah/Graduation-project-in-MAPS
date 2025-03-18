@@ -5,13 +5,7 @@ const SideBar = ({ onSelectGenre }) => {
   return (
     <>
       <div id="sidebar" className="sidebar-app">
-        <h3 className="SidebarTitle">
-          Genres
-          <i
-            id="sidebar-toggle"
-            className="fa-solid fa-chart-bar "
-          ></i>
-        </h3>
+        <h3 className="SidebarTitle">Genres</h3>
         <div>
           <GenreList onSelectGenre={onSelectGenre} />
         </div>

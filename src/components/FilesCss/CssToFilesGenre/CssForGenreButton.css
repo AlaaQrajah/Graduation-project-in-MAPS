@@ -6,6 +6,6 @@
   @apply w-12 h-12 rounded-lg object-cover;
 }
 .genre-button-name {
-  @apply ml-3 text-sm font-medium text-gray-900 dark:text-white;
+  @apply ml-3 text-sm font-medium text-gray-900 dark:text-white hidden lg:block;
 }
 /* End GenreButton */

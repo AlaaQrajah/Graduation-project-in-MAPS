@@ -1,4 +1,10 @@
 /* Start Navbar */
+.navbar-app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
 .search-section {
   @apply col-span-9 md:col-span-10 flex justify-center md:justify-start;
 }
