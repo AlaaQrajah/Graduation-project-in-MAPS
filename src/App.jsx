@@ -1,21 +1,11 @@
 import { useState } from "react";
 import MainContent from "./components/layout/MainContent";
-
 import { useEffect } from "react";
 import NavBar from "./components/layout/NavBar";
 import SideBar from "./components/layout/SideBar";
-
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-
-  // Filter Genres
-  // const [selectGenre, setSelectGenre] = useState(null);
-
-  // Filter Platform
-  // const [selectPlatform, setSelectPlatform] = useState(null);
-
   const [gameQuery, setGameQuery] = useState({});
-
   const root = document.documentElement;
 
   useEffect(() => {

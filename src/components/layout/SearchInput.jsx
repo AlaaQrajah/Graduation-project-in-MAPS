@@ -1,25 +1,22 @@
 import { useRef } from "react";
 import "../../App.css";
+import "../FilesCss/CssToLayout/CssForSearchInput.css";
 const SearchInput = ({ onSearch }) => {
   const ref = useRef(null);
   return (
     <form
-      className="w-full "
+      className="w-full"
       onSubmit={(event) => {
         event.preventDefault();
         if (ref.current) onSearch(ref.current.value);
       }}
     >
-      <label
-        htmlFor="default-search"
-        className="text-style dark:text-white"
-      >
+      <label htmlFor="default-search" className="SearchInputLabel text-style  ">
         Search
       </label>
       <div className="relative">
         <div className="input-icon">
           <svg
-            className="dark:text-gray-400"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

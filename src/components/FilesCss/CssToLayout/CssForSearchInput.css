@@ -1,11 +1,8 @@
 /* Start SearchInput */
-.search-label {
-  @apply dark:text-white;
+.SearchInputLabel {
+  @apply  dark:text-white;
 }
-.search-container {
-  @apply relative;
-}
-.search-svg-icon {
-  @apply dark:text-gray-300;
+.relative .input-icon svg {
+  @apply dark:text-gray-400;
 }
 /* End SearchInput */

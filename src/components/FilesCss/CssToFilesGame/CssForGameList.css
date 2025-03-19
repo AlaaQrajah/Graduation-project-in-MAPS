@@ -1,9 +1,14 @@
 /* Start GameList */
 .error-alert {
   @apply p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
 }
 .alert-title {
-  @apply text-lg text-red-600 font-bold;
+  @apply text-2xl text-red-600 font-bold;
 }
 .game-grid {
   display: grid;

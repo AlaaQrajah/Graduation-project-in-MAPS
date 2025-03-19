@@ -3,6 +3,8 @@ import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import "../../App.css";
 import "../FilesCss/CssToFilesGame/CssForGameList.css";
+import ErrorPage from "../layout/ErrorPage";
+
 const GameList = ({
   selectGenre,
   selectPlatform,
@@ -15,12 +17,12 @@ const GameList = ({
     selectSortOrder,
     searchText
   );
-  const skeletons = [1, 2, 3, 4, 5, 6,7,8,9,10];
+  const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   if (error)
     return (
-      <div className="error-alert " role="alert">
-        <span className="alert-title">Danger alert!</span> {error}
+      <div  role="alert">
+        <ErrorPage ErrorMassage={"Danger alert!"+ error} />
       </div>
     );
 
