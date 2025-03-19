@@ -5,7 +5,7 @@ const CriticScore = ({ score }) => {
     score > 75 ? "bg-green-600" : score > 60 ? "bg-yellow-300" : "bg-red-800";
   let textColor =
     score > 75
-      ? "text-white-600 "
+      ? "text-white-600"
       : score > 60
       ? "text-yellow-300"
       : "text-red-600";

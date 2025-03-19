@@ -1,4 +1,9 @@
+import { useState } from "react";
+import "./FilesCss/CssForSpinner.css";
+
 const SortSelector = ({ onSelectSortOrder, selectSortOrder }) => {
+  const [isOpen, setIsOpen] = useState(false); // حالة القائمة
+
   const sortOrders = [
     { value: "", label: "Relevance" },
     { value: "-added", label: "Date added" },
@@ -13,20 +18,21 @@ const SortSelector = ({ onSelectSortOrder, selectSortOrder }) => {
     "Relevance";
 
   return (
-    <>
+    <div className="relative inline-block text-left">
+      {/* زر القائمة */}
       <button
         id="sortDropdownButton"
-        data-dropdown-toggle="sortDropdown"
-        className="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gry-600 dark:hover:bg-gary-700 dark:focus:ring-gray-800 mx-2"
+        className="sortDropdown"
         type="button"
+        onClick={() => setIsOpen(!isOpen)} // التبديل بين الفتح والإغلاق
       >
         Order by: {selectedSortLabel}
         <svg
-          className="w-2.5 h-2.5 ms-3"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 10 6"
+          className="ml-2 w-4 h-4"
         >
           <path
             stroke="currentColor"
@@ -37,27 +43,32 @@ const SortSelector = ({ onSelectSortOrder, selectSortOrder }) => {
           />
         </svg>
       </button>
-      <div
-        id="sortDropdown"
-        className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-      >
-        <ul
-          className="py-2 text-sm text-gray-700 dark:text-gray-200"
-          aria-labelledby="sortDropdownButton"
+
+      {/* القائمة المنسدلة */}
+      {isOpen && (
+        <div
+          id="sortDropdown"
+          className="absolute z-10 mt-2 w-48 bg-white border border-gray-300 
+                     rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600"
         >
-          {sortOrders.map((order) => (
-            <li
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-              key={order.value}
-              value={order.value}
-              onClick={() => onSelectSortOrder(order.value)}
-            >
-              {order.label}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
+          <ul className="py-2">
+            {sortOrders.map((order) => (
+              <li
+                key={order.value}
+                className="px-4 py-2 cursor-pointer hover:bg-gray-200 
+                           dark:hover:bg-gray-600"
+                onClick={() => {
+                  onSelectSortOrder(order.value);
+                  setIsOpen(false); // إغلاق القائمة بعد الاختيار
+                }}
+              >
+                {order.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
   );
 };
 

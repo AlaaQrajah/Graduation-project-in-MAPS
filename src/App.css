@@ -354,8 +354,8 @@ body {
 /* التركيز على العنصر */
 .input-style:focus {
   outline: none;
-  box-shadow: 0 0 0 4px rgba(36, 174, 155, 0.5); /* focus:ring-teal-500 */
-  border-color: #34d399; /* focus:border-teal-500 */
+  border-color: #ccc; /* focus:border-teal-500 */
+  @apply dark:border-stone-500;
 }
 
 /* عند التبديل إلى الوضع المظلم */
@@ -430,4 +430,3 @@ body.dark .input-style:focus {
   display: flex;
   cursor: pointer;
 }
- 
