@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import getCroppedImageUrl from "../../services/image-url";
 import CriticScore from "../CriticScore";
 import { Emoji } from "../Emoji";
@@ -7,15 +8,14 @@ import "../FilesCss/CssToFilesGame/CssForGameCard.css";
 
 const GameCard = ({ game }) => {
   return (
-    
     <div id="content" className="game-card">
-      <a href="#" className="game-link">
+      <Link to={`/game/${game.id}`} className="game-link">
         <img
           className="game-image"
           src={getCroppedImageUrl(game.background_image)}
           alt={game.name}
         />
-      </a>
+      </Link>
       <div className="game-info">
         <div className="game-details">
           <div className="game-platforms">
@@ -29,11 +29,11 @@ const GameCard = ({ game }) => {
             <CriticScore score={game.metacritic} />
           </div>
         </div>
-        <a href="#" className="game-title-link">
+        <Link to={`/game/${game.id}`} className="game-title-link">
           <h5 className="game-title">
             {game.name} <Emoji rating={game.rating_top} />
           </h5>
-        </a>
+        </Link>
       </div>
     </div>
   );

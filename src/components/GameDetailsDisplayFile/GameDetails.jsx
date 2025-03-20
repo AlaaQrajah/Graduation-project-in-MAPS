@@ -1,9 +1,6 @@
-// import React from 'react'
+const GameDetails = () => {
+  return;
+  <></>;
+};
 
-// const GameDetails = () => {
-//   return (
-//     <div>GameDetails</div>
-//   )
-// }
-
-// export default GameDetails
+export default GameDetails;

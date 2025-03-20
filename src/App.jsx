@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react"; // ✅ أضف useEffect هنا
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainContent from "./components/layout/MainContent";
-import { useEffect } from "react";
 import NavBar from "./components/layout/NavBar";
 import SideBar from "./components/layout/SideBar";
+import GameDetails from "./components/GameDetailsDisplayFile/GameDetails"; // استيراد صفحة التفاصيل
+
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [gameQuery, setGameQuery] = useState({});
@@ -22,7 +24,7 @@ function App() {
   };
 
   return (
-    <>
+    <Router>
       <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200 ">
         <NavBar
           toggleTheme={toggleTheme}
@@ -34,21 +36,29 @@ function App() {
           <SideBar
             onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
           />
-          <MainContent
-            selectPlatform={gameQuery.platform}
-            selectSortOrder={gameQuery.sortOrder}
-            selectGenre={gameQuery.genre}
-            searchText={gameQuery.searchText}
-            onSelectPlatform={(platform) =>
-              setGameQuery({ ...gameQuery, platform })
-            }
-            onSelectSortOrder={(sortOrder) =>
-              setGameQuery({ ...gameQuery, sortOrder })
-            }
-          />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <MainContent
+                  selectPlatform={gameQuery.platform}
+                  selectSortOrder={gameQuery.sortOrder}
+                  selectGenre={gameQuery.genre}
+                  searchText={gameQuery.searchText}
+                  onSelectPlatform={(platform) =>
+                    setGameQuery({ ...gameQuery, platform })
+                  }
+                  onSelectSortOrder={(sortOrder) =>
+                    setGameQuery({ ...gameQuery, sortOrder })
+                  }
+                />
+              }
+            />
+            <Route path="/game/:id" element={<GameDetails />} />
+          </Routes>
         </div>
       </div>
-    </>
+    </Router>
   );
 }
 
