@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegSadTear } from "react-icons/fa"; // يمكنك استخدام أيقونات من react-icons
+import { FaRegSadTear } from "react-icons/fa"; /* يمكنك استخدام أيقونات من react-icons*/
 import ImageError from "../../assets/images/ErrorPage.png";
  
 const ErrorPage = ({ ErrorMassage }) => {
