@@ -1,0 +1,65 @@
+/* Start GameDetailsSkeleton */
+.skeleton-container {
+  @apply min-h-screen bg-[#151515] text-white w-full max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.skeleton-header {
+  @apply bg-[#202020] w-full;
+}
+
+.skeleton-title-section {
+  @apply bg-[#1a1a1a] w-full;
+}
+
+.skeleton-text {
+  @apply h-3 sm:h-4 bg-gray-700 rounded;
+}
+
+.skeleton-animation {
+  @apply animate-pulse;
+}
+
+.skeleton-image {
+  @apply bg-gray-700 rounded-lg aspect-video;
+}
+
+.skeleton-grid {
+  @apply grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-12;
+}
+
+.skeleton-main {
+  @apply col-span-1 lg:col-span-8;
+}
+
+.skeleton-sidebar {
+  @apply col-span-1 lg:col-span-4;
+}
+
+.skeleton-screenshots-grid {
+  @apply grid grid-cols-1   sm:grid-cols-4 gap-1 sm:gap-2 mt-2;
+}
+
+.skeleton-about {
+  @apply mt-4 sm:mt-6;
+}
+
+.skeleton-about-title {
+  @apply h-5 sm:h-6 bg-gray-700 rounded w-20 sm:w-24 mb-3 sm:mb-4;
+}
+
+.skeleton-about-content {
+  @apply space-y-1 sm:space-y-2;
+}
+
+.skeleton-sidebar-container {
+  @apply bg-[#202020] rounded-lg p-3 sm:p-4;
+}
+
+.skeleton-sidebar-content {
+  @apply space-y-3 sm:space-y-4;
+}
+
+.skeleton-sidebar-item {
+  @apply h-3 sm:h-4 bg-gray-700 rounded;
+}
+/* End GameDetailsSkeleton */

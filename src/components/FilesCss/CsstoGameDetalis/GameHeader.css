@@ -1,0 +1,17 @@
+/* Start GameHeader */
+.header-container {
+  @apply bg-[#202020] w-full;
+}
+
+.header-content {
+  @apply container mx-auto px-4 py-2 sm:py-3;
+}
+
+.header-navigation {
+  @apply text-xs sm:text-sm text-gray-400 flex items-center gap-1 sm:gap-2 flex-wrap;
+}
+
+.header-icon {
+  @apply text-gray-500 text-sm sm:text-base;
+}
+/* End GameHeader */

@@ -1,0 +1,65 @@
+/* Start GameInfo */
+.info-container {
+  @apply bg-[#1a1a1a] w-full;
+}
+
+.info-content {
+  @apply container mx-auto px-4 py-3 sm:py-4;
+}
+
+.info-header {
+  @apply flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4;
+}
+
+.info-platforms {
+  @apply flex flex-wrap items-center gap-2 sm:gap-3;
+}
+
+.release-date {
+  @apply text-gray-400 text-xs sm:text-sm;
+}
+
+.platform-icons {
+  @apply text-base sm:text-lg;
+}
+
+.info-rating {
+  @apply flex items-center gap-2 sm:gap-4;
+}
+
+.rating-score-container {
+  @apply flex items-center gap-2;
+}
+
+.info-score {
+  @apply bg-green-600 text-white px-2 sm:px-2.5 py-1 rounded text-xs sm:text-sm font-bold;
+}
+
+.rating-emoji {
+  @apply text-lg sm:text-xl;
+}
+
+.ratings-count {
+  @apply text-xs text-gray-400;
+}
+
+.info-title {
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-2 sm:mt-3;
+}
+
+.info-buttons {
+  @apply flex flex-wrap gap-2 sm:gap-4 mt-3 sm:mt-4;
+}
+
+.add-game-button {
+  @apply bg-green-600 hover:bg-green-700 px-3 sm:px-4 py-2 rounded-lg flex items-center gap-2 transition-colors text-sm sm:text-base flex-grow sm:flex-grow-0;
+}
+
+.wishlist-button {
+  @apply bg-[#2a2a2a] hover:bg-[#303030] px-3 sm:px-4 py-2 rounded-lg flex items-center gap-2 transition-colors text-sm sm:text-base flex-grow sm:flex-grow-0;
+}
+
+.button-icon {
+  @apply text-xs sm:text-sm;
+}
+/* End GameInfo */

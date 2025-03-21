@@ -1,0 +1,25 @@
+/* Start GameMedia */
+.media-container {
+  @apply bg-[#202020] rounded-lg overflow-hidden;
+}
+
+.media-main-image {
+  @apply aspect-video w-full;
+}
+
+.media-image {
+  @apply w-full h-full object-cover;
+}
+
+.media-grid {
+  @apply grid grid-cols-1   sm:grid-cols-4 gap-1 sm:gap-0.5 p-1 sm:p-0.5;
+}
+
+.media-thumbnail {
+  @apply aspect-video;
+}
+
+.media-thumbnail-image {
+  @apply w-full h-full object-cover hover:opacity-75 transition cursor-pointer;
+}
+/* End GameMedia */
