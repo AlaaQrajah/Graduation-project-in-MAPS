@@ -1,6 +1,6 @@
 /* Start GameDetailsSkeleton */
 .skeleton-container {
-  @apply min-h-screen bg-[#151515] text-white w-full max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-8;
+  @apply min-h-screen bg-[#151515] text-white w-[1260px] mx-auto px-4 sm:px-6 lg:px-8;
 }
 
 .skeleton-header {
